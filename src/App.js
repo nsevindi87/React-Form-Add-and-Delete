@@ -3,14 +3,6 @@ import AddUser from "./components/Adduser";
 import Users from "./components/Users";
 
 class App extends Component{
- 
-  deleteUser(id){
-    let updatedUsers = this.state.users;
-    updatedUsers = updatedUsers.filter(user => user.id !== id);
-    this.setState({
-      users: updatedUsers
-    });
-  }
 
 constructor(props){
   super(props);
@@ -34,7 +26,25 @@ constructor(props){
     ]
   };
   this.deleteUser = this.deleteUser.bind(this);
+  this.addUser = this.addUser.bind(this)
 }
+
+addUser(newUser){
+  let updatedUsers = this.state.users;
+  updatedUsers.push(newUser);
+  this.setState({
+    users: updatedUsers
+  })
+}
+
+deleteUser(id){
+  let updatedUsers = this.state.users;
+  updatedUsers = updatedUsers.filter(user => user.id !== id);
+  this.setState({
+    users: updatedUsers
+  });
+}
+
 
   render(){
 
@@ -42,7 +52,7 @@ constructor(props){
       <div className="container">
         <h5>User App</h5>
         <hr />
-        <AddUser/>
+        <AddUser addUser={this.addUser}/>
         <hr />
         <Users deleteUser={this.deleteUser} users={this.state.users}/>
       </div>
