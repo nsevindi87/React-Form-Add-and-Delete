@@ -1,14 +1,42 @@
 import { Component } from "react";
+import AddUser from "./components/Adduser";
 
 class App extends Component{
+
+
+constructor(props){
+  super(props);
+  this.state = {
+    users:[
+      {
+        id:1,
+        name:"Murat Coskun",
+        email:"murat@gmail.com"
+      },
+      {
+        id:2,
+        name:"Bilal Coskun",
+        email:"bilal@gmail.com"
+      },
+      {
+        id:3,
+        name:"Serkan Coskun",
+        email:"serkan@gmail.com"
+      }
+    ]
+  };
+}
+
+
+
+
   render(){
-    const title = "User App"
 
     return (
       <div className="container">
-        <h5>{title}</h5>
-        <label htmlFor="name">Name</label>
-        <p className="lead">This is sample text</p>
+        <h5>User App</h5>
+        <hr />
+        <AddUser/>
       </div>
     )
   }
