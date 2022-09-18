@@ -45,7 +45,6 @@ deleteUser(id){
   });
 }
 
-
   render(){
 
     return (
@@ -59,5 +58,4 @@ deleteUser(id){
     )
   }
 }
-
 export default App;
