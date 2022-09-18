@@ -1,5 +1,6 @@
 import { Component } from "react";
 import AddUser from "./components/Adduser";
+import Users from "./components/Users";
 
 class App extends Component{
 
@@ -27,9 +28,6 @@ constructor(props){
   };
 }
 
-
-
-
   render(){
 
     return (
@@ -37,6 +35,8 @@ constructor(props){
         <h5>User App</h5>
         <hr />
         <AddUser/>
+        <hr />
+        <Users users={this.state.users}/>
       </div>
     )
   }

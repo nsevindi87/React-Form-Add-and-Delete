@@ -12,8 +12,8 @@ class AddUser extends Component{
                             <input type="text" name="name" id="name" placeholder="Enter Name" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">E-mail</label>
-                            <input type="text" name="email" id="email" placeholder="Enter e-mail" className="form-control"/>
+                            <label htmlFor="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="Enter Email" className="form-control"/>
                         </div>
                         <button type="submit" className="btn btn-danger btn-block">Add New User</button>
                     </form>
