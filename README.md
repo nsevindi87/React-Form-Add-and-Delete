@@ -1,5 +1,5 @@
 Fontawesome ve Boostrap ekli bir proje.
-
+http://localhost:3000
 
 
 # Getting Started with Create React App
