@@ -1,6 +1,19 @@
 import { Component } from "react";
 
 class User extends Component{
+    
+
+    onDeleteClick(id, e){
+        const {deleteUser} = this.props;
+
+        console.log("tiklandi")
+        deleteUser(id);
+
+    }
+
+
+
+
     render(){
         const {id,name,email} = this.props;
         return(
@@ -8,8 +21,8 @@ class User extends Component{
                 <td>{id}</td>
                 <td>{name}</td>
                 <td>{email}</td>
-                <td><button className="btn btn-danger">Delete</button></td>
-            </tr>
+                <td><button onClick={this.onDeleteClick.bind(this,id)} className="btn btn-danger">Delete</button></td>
+            </tr>                       
         )
     }
 }

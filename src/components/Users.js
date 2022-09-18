@@ -3,7 +3,7 @@ import User from "./User";
 
 class Users extends Component {
     render() {
-    const {users} = this.props;
+    const {users, deleteUser} = this.props;
 
         return (
             <table className="table table-dark">
@@ -19,7 +19,7 @@ class Users extends Component {
                     {users.map( user=>{
                         const{id,name,email}=user;
 
-                        return<User key={id} id={id} name={name} email={email}/>
+                        return<User key={id} id={id} name={name} email={email} deleteUser={deleteUser}/>
                     })}
                 </tbody>
             </table>
